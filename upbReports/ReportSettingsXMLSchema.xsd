@@ -31,7 +31,7 @@
         </xs:documentation>
     </xs:annotation>
 
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/upbReports/ReportCategoryXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/upbReports/ReportCategoryXMLSchema.xsd"/>
 
     <xs:element name="ReportSettings" type="ReportSettings"/>
 	
