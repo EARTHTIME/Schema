@@ -32,8 +32,8 @@
 
         </xs:documentation>
     </xs:annotation>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/ValueModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/ReduxMatrixXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/ValueModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/ReduxMatrixXMLSchema.xsd"/>
 
     <xs:element name="PhysicalConstants" type="PhysicalConstants"/>
 

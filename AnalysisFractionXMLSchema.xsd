@@ -35,9 +35,9 @@
 
         </xs:documentation>
     </xs:annotation>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/InitialPbModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/InitialPbModelETXMLSchema.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/ValueModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/InitialPbModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/InitialPbModelETXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/ValueModelXMLSchema.xsd"/>
     <xs:element name="AnalysisFraction">
         <xs:complexType>
             <xs:sequence>

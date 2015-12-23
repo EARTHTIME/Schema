@@ -38,16 +38,16 @@
         </xs:documentation>
     </xs:annotation>
 
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/TracerXMLSchema.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/TracerUPbModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/MineralStandardModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/MineralStandardUPbModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/PbBlankXMLSchema.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/PbBlankICModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/AnalysisFractionXMLSchema.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/PhysicalConstantsXMLSchema.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/PhysicalConstantsModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/AnalysisImageXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/TracerXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/TracerUPbModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/MineralStandardModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/MineralStandardUPbModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/PbBlankXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/PbBlankICModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/AnalysisFractionXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/PhysicalConstantsXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/PhysicalConstantsModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/AnalysisImageXMLSchema.xsd"/>
 
     <xs:annotation>
         <xs:documentation xml:lang="en">

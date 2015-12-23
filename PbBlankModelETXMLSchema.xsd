@@ -31,7 +31,7 @@
 
         </xs:documentation>
     </xs:annotation>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/ValueModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/ValueModelXMLSchema.xsd"/>
   
     <xs:element name="PbBlankModelET" type="PbBlankModelET"/>
   

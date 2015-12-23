@@ -34,8 +34,8 @@
 
         </xs:documentation>
     </xs:annotation>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/ValueModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/InitialPbModelETXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/ValueModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/InitialPbModelETXMLSchema.xsd"/>
  
     <xs:element name="MineralStandardUPbModel" type="MineralStandardUPbModel"/>
   

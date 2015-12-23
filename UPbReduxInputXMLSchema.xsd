@@ -33,9 +33,9 @@
 
         </xs:documentation>
     </xs:annotation>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/TracerXMLSchema.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/TracerUPbModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/ValueModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/TracerXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/TracerUPbModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/ValueModelXMLSchema.xsd"/>
     <xs:element name="UPbReduxFraction" >
         <xs:complexType >
             <xs:sequence maxOccurs="1"> 
