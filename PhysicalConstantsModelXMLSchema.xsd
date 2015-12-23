@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.earth-time.org"
+           xmlns="http://www.earth-time.org"
+           elementFormDefault="qualified">
+    <xs:annotation>
+        <xs:documentation xml:lang="en">
+            This schema defines the contents of an PhysicalConstantsModel
+            for the EARTHTIME / EarthChem project.....
+
+            Copyright 2006-2012 James F. Bowring and EARTHTIME
+
+            Licensed under the Apache License, Version 2.0 (the "License");
+            you may not use this file except in compliance with the License.
+            You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+            Unless required by applicable law or agreed to in writing, software
+            distributed under the License is distributed on an "AS IS" BASIS,
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+            See the License for the specific language governing permissions and
+            limitations under the License.
+
+            Author: James F. Bowring[smtp:bowring@gmail.com]
+
+            Created: 30.June.2012
+            Revised: 18.July.2012
+            Revised: 09.August.2012
+
+
+        </xs:documentation>
+    </xs:annotation>
+    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/ValueModelXMLSchema.xsd"/>
+  
+    <xs:element name="PhysicalConstantsModel" type="PhysicalConstantsModel"/>
+  
+    <xs:complexType name="PhysicalConstantsModel">
+        <xs:sequence>
+            <xs:element name="modelName" type="xs:string" />
+            <xs:element name="versionNumber" type="xs:integer" />
+            <xs:element name="minorVersionNumber" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="labName" type="xs:string" />
+            <xs:element name="dateCertified" type="xs:date" />
+            <xs:element name="reference" type="xs:string" />
+            <xs:element name="comment" type="xs:string" />
+            <xs:element name="ratios">
+                <xs:complexType>
+                    <xs:sequence minOccurs="6" maxOccurs="6">
+                        <xs:element name="ValueModelReferenced" type="MeasuredConstant">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="rhos">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" maxOccurs="3" name="entry">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="string" type="PhysicalConstantsModelRhoNameType" />
+                                    <xs:element name="big-decimal" type="xs:string" />
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="atomicMolarMasses">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="7" maxOccurs="7" name="entry">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="string" type="PhysicalConstantsModelAtomicMolarMassNameType" />
+                                    <xs:element name="big-decimal" type="xs:string" />
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>           
+            
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="PhysicalConstantsModelRhoNameType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="rhoLambda230__lambda231" />
+            <xs:enumeration value="rhoLambda230__lambda232" />
+            <xs:enumeration value="rhoLambda230__lambda235" />
+            <xs:enumeration value="rhoLambda230__lambda238" />
+            
+            <xs:enumeration value="rhoLambda231__lambda232" />
+            <xs:enumeration value="rhoLambda231__lambda235" />
+            <xs:enumeration value="rhoLambda231__lambda238" />
+           
+            <xs:enumeration value="rhoLambda232__lambda235" />
+            <xs:enumeration value="rhoLambda232__lambda238" />
+                      
+            <xs:enumeration value="rhoLambda235__lambda238" />
+
+        </xs:restriction>
+    </xs:simpleType>    
+    
+       <xs:simpleType name="PhysicalConstantsModelAtomicMolarMassNameType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="gmol204" />
+            <xs:enumeration value="gmol205" />
+            <xs:enumeration value="gmol206" />
+            <xs:enumeration value="gmol207" />           
+            <xs:enumeration value="gmol208" />
+            <xs:enumeration value="gmol235" />
+            <xs:enumeration value="gmol238" />
+        </xs:restriction>
+    </xs:simpleType>    
+
+
+</xs:schema>

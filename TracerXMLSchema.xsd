@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.earth-time.org"
+           xmlns="http://www.earth-time.org"
+           elementFormDefault="qualified">
+    <xs:annotation>
+        <xs:documentation xml:lang="en">
+            This schema defines the contents of an EARTHTIME tracer.
+
+            Copyright 2006-2012 James F. Bowring and EARTHTIME
+
+            Licensed under the Apache License, Version 2.0 (the "License");
+            you may not use this file except in compliance with the License.
+            You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+            Unless required by applicable law or agreed to in writing, software
+            distributed under the License is distributed on an "AS IS" BASIS,
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+            See the License for the specific language governing permissions and
+            limitations under the License.
+
+            Author: James F. Bowring[smtp:bowring@gmail.com]
+
+            Created: 1.January.2007
+            Revised: 1.January.2008
+            Revised: 5.April.2009
+            Revised: 9.January.2011
+
+        </xs:documentation>
+    </xs:annotation>
+    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/ValueModelXMLSchema.xsd"/>
+
+    <xs:element name="Tracer" type="Tracer"/>
+
+    <xs:complexType name ="Tracer">
+        <xs:sequence maxOccurs="1">
+            <xs:element name="tracerName" type="xs:string" />
+            <xs:element name="versionNumber" type="xs:integer" />
+            <xs:element name="tracerType" type="tracerTypeType" />
+            <xs:element name="labName" type="xs:string" />
+            <xs:element name="dateCertified" type="xs:date" />
+            <xs:element name="ratios">
+                <xs:complexType>
+                    <xs:sequence minOccurs="1" maxOccurs="15">
+                        <xs:element name="ValueModel" type="TracerRatio">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="isotopeConcentrations">
+                <xs:complexType>
+                    <xs:sequence minOccurs="0" maxOccurs="3">
+                        <xs:element name="ValueModel" type="IsotopeConcentration">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:simpleType name="tracerTypeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE" />
+            <xs:enumeration value="mixed 205-235" />
+            <xs:enumeration value="mixed 205-233-235" />
+            <xs:enumeration value="mixed 208-235" />
+            <xs:enumeration value="mixed 205-233-236" />
+            <xs:enumeration value="mixed 202-205-233-235" />
+            <xs:enumeration value="mixed 202-205-233-236" />
+            <xs:enumeration value="mixed 205-233-235-230Th" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

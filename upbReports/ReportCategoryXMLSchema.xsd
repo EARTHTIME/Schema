@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.earth-time.org"
+           xmlns="http://www.earth-time.org"
+           elementFormDefault="qualified">
+    <xs:annotation>
+        <xs:documentation xml:lang="en">
+            This schema defines the contents of a ReportCategory for U-Pb_Redux.
+
+            Copyright 2006-2012 James F. Bowring and EARTHTIME
+
+            Licensed under the Apache License, Version 2.0 (the "License");
+            you may not use this file except in compliance with the License.
+            You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+            Unless required by applicable law or agreed to in writing, software
+            distributed under the License is distributed on an "AS IS" BASIS,
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+            See the License for the specific language governing permissions and
+            limitations under the License.
+
+            Author: James F. Bowring[smtp:bowring@gmail.com]
+
+            Created: 1.May.2010
+
+        </xs:documentation>
+    </xs:annotation>
+
+    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/upbReports/ReportColumnXMLSchema.xsd"/>
+
+    <xs:element name="ReportCategory" type="ReportCategory"/>
+	
+    <xs:complexType name="ReportCategory">
+        <xs:sequence>
+            <xs:element name="displayName" type="xs:string" />
+            <xs:element name="positionIndex" type="xs:integer" />
+            <xs:element name="categoryColumns">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReportColumn" type="ReportColumn" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="categoryColor" type="xs:byte" />
+            <xs:element name="visible" type="xs:boolean" />
+            <xs:element name="legacyData" type="xs:boolean" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

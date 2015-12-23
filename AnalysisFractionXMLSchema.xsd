@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.earth-time.org"
+           xmlns="http://www.earth-time.org"
+           elementFormDefault="qualified">
+    <xs:annotation>
+        <xs:documentation xml:lang="en">
+            This schema defines the contents of an AnalysisFraction
+            for the EARTHTIME / EarthChem project.....
+
+            Copyright 2006-2012 James F. Bowring and EARTHTIME
+
+            Licensed under the Apache License, Version 2.0 (the "License");
+            you may not use this file except in compliance with the License.
+            You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+            Unless required by applicable law or agreed to in writing, software
+            distributed under the License is distributed on an "AS IS" BASIS,
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+            See the License for the specific language governing permissions and
+            limitations under the License.
+
+            Author: James F. Bowring[smtp:bowring@gmail.com]
+
+            Created: 01.August.2007
+            Revised: 01.January.2008
+            Revised: 05.April.2009
+            Revised: 20.April.2010
+            Revised: 16.August.2010
+            Revised: 23.October.2010
+            Revised: 26.March.2012 for InitialPbModelET
+
+        </xs:documentation>
+    </xs:annotation>
+    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/InitialPbModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/InitialPbModelETXMLSchema.xsd"/>
+    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/ValueModelXMLSchema.xsd"/>
+    <xs:element name="AnalysisFraction">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- added oct 2010 -->
+                <xs:element name="isLegacy" type="xs:boolean" minOccurs="0"/>
+                <xs:element name="sampleName" type="xs:string"/>
+                <xs:element name="fractionID" type="xs:string"/>
+                <!-- added April 2010 minOccurs = 0 is for backward compatibility-->
+                <xs:element name="grainID" type="xs:string" minOccurs="0"/>
+                <xs:element name="zircon" type="xs:boolean"/>
+                <xs:element name="imageURL">
+                    <xs:complexType>
+                        <xs:attribute name="URL" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="timeStamp" type="xs:string"/>
+                <xs:element name="mineralName" type="StandardMineralNames"/>
+                <xs:element name="settingType" type="xs:string"/>
+                <xs:element name="numberOfGrains" type="xs:unsignedByte"/>
+                <xs:element name="estimatedDate" type="xs:decimal"/>
+                <!-- added oct 2010 -->
+                <xs:element name="staceyKramersOnePctUnct" type="xs:decimal" minOccurs="0"/>
+                <!-- added oct 2010 -->
+                <xs:element name="staceyKramersCorrelationCoeffs" type="xs:decimal" minOccurs="0"/>
+                <xs:element name="physicallyAbraded" type="xs:boolean"/>
+                <xs:element name="leachedInHFAcid" type="xs:boolean"/>
+                <xs:element name="annealedAndChemicallyAbraded" type="xs:boolean"/>
+                <xs:element name="chemicallyPurifiedUPb" type="xs:boolean"/>
+                <xs:element name="analysisFractionComment" type="xs:string"/>
+                <xs:element name="pbBlankID" type="xs:string"/>
+                <xs:element name="tracerID" type="xs:string"/>
+                <!-- added August 2010 minOccurs = 0 is for backward compatibility-->
+                <xs:element name="fractionationCorrectedPb" type="xs:boolean" minOccurs="0"/>
+                <xs:element name="alphaPbModelID" type="xs:string"/>
+                <!-- added August 2010 minOccurs = 0 is for backward compatibility-->
+                <xs:element name="fractionationCorrectedU" type="xs:boolean" minOccurs="0"/>
+                <xs:element name="alphaUModelID" type="xs:string"/>
+                <xs:element name ="initialPbModel" type="InitialPbModel" minOccurs="0"  maxOccurs="1"/>
+                <xs:element name ="initialPbModelET" type="InitialPbModelET" minOccurs="0"  maxOccurs="1"/>
+                <xs:element name="pbCollectorType" type="PbCollectorTypes"/>
+                <xs:element name="uCollectorType" type="UCollectorTypes"/>
+                <xs:element name="analysisMeasures">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0"  maxOccurs="unbounded">
+                            <xs:element name="ValueModel" type="AnalysisMeasure">
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="measuredRatios">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0"  maxOccurs="unbounded">
+                            <xs:element name="MeasuredRatioModel" type="MeasuredRatio" >
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="radiogenicIsotopeRatios">
+                    <xs:complexType>
+                        <xs:sequence  minOccurs="0"  maxOccurs="unbounded">
+                            <xs:element name="ValueModel" type="RadiogenicIsotopeRatio">
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="radiogenicIsotopeDates">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0"  maxOccurs="unbounded">
+                            <xs:element name="ValueModel" type="RadiogenicIsotopeDate">
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="compositionalMeasures">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0"  maxOccurs="unbounded">
+                            <xs:element name="ValueModel" type="CompositionalMeasure">
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="sampleIsochronRatios">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0"  maxOccurs="unbounded">
+                            <xs:element name="ValueModel" type="SampleIsochronRatio">
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="StandardMineralNames">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="other"/>
+            <xs:enumeration value="zircon"/>
+            <xs:enumeration value="xenotime"/>
+            <xs:enumeration value="monazite"/>
+            <xs:enumeration value="apatite"/>
+            <xs:enumeration value="titanite"/>
+            <xs:enumeration value="rutile"/>
+            <xs:enumeration value="calcite"/>
+            <xs:enumeration value="whole rock"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PbCollectorTypes">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="Faraday"/>
+            <xs:enumeration value="Daly"/>
+            <xs:enumeration value="SEM"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="UCollectorTypes">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="Faraday"/>
+            <xs:enumeration value="Daly"/>
+            <xs:enumeration value="SEM"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

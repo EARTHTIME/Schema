@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.earth-time.org"
+           xmlns="http://www.earth-time.org"
+           elementFormDefault="qualified">
+    <xs:annotation>
+        <xs:documentation xml:lang="en">
+            This schema defines the contents of a MineralStandardUPbModel
+            for the EARTHTIME / EarthChem project.....
+
+            Copyright 2006-2012 James F. Bowring and EARTHTIME
+
+            Licensed under the Apache License, Version 2.0 (the "License");
+            you may not use this file except in compliance with the License.
+            You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+            Unless required by applicable law or agreed to in writing, software
+            distributed under the License is distributed on an "AS IS" BASIS,
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+            See the License for the specific language governing permissions and
+            limitations under the License.
+
+            Author: James F. Bowring[smtp:bowring@gmail.com]
+
+            Created: 12.April.2012
+            Revised: 11.May.2012
+            Revised: 09.August.2012
+            Revised: 27.December.2014
+            Revised: 05.June.2015
+
+
+        </xs:documentation>
+    </xs:annotation>
+    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/ValueModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/InitialPbModelETXMLSchema.xsd"/>
+ 
+    <xs:element name="MineralStandardUPbModel" type="MineralStandardUPbModel"/>
+  
+    <xs:complexType name="MineralStandardUPbModel">
+        <xs:sequence>
+            <xs:element name="modelName" type="xs:string" />
+            <xs:element name="versionNumber" type="xs:integer" />
+            <xs:element name="minorVersionNumber" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="labName" type="xs:string" />
+            <xs:element name="dateCertified" type="xs:date" />
+            <xs:element name="reference" type="xs:string" />
+            <xs:element name="comment" type="xs:string" />
+            <xs:element name="mineralStandardName" type="MineralStandardUPbNameType" />
+            <xs:element name="mineralName" type="MineralNameType" />
+            <xs:element name ="initialPbModelET" type="InitialPbModelET" minOccurs="0"  maxOccurs="1"/> 
+            <xs:element name="ratios">
+                <xs:complexType>
+                    <xs:sequence minOccurs="5" maxOccurs="5">
+                        <xs:element name="MineralStandardUPbRatioModel" type="MineralStandardUPbRatio">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="rhos">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" maxOccurs="10" name="entry">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="string" type="MineralStandardUPbModelRhoNameType" />
+                                    <xs:element name="big-decimal" type="xs:decimal" />
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="concentrationsPPM" minOccurs="0" maxOccurs="1"> 
+                <xs:complexType>
+                    <xs:sequence minOccurs="2" maxOccurs="2">
+                        <xs:element name="ValueModel" type="MineralStandardPPMConcentration">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>  
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:simpleType name="MineralStandardUPbNameType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE" />
+            <xs:enumeration value="Peixe" />
+            <xs:enumeration value="Sri Lanka" />
+            <xs:enumeration value="Temora" />
+            <xs:enumeration value="FC-1" />
+            <xs:enumeration value="FC-5" />
+            <xs:enumeration value="GJ-1" />
+            <xs:enumeration value="Manicouagan" />
+            <xs:enumeration value="Plesovice" />
+            <xs:enumeration value="Fish Canyon Tuff" />
+            <xs:enumeration value="North Mountain Basalt" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="MineralNameType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE" />
+            <xs:enumeration value="other" />
+            <xs:enumeration value="zircon" />
+            <xs:enumeration value="xenotime" />
+            <xs:enumeration value="monazite" />
+            <xs:enumeration value="apatite" />
+            <xs:enumeration value="titanite" />
+            <xs:enumeration value="rutile" />
+            <xs:enumeration value="calcite" />
+            <xs:enumeration value="whole rock" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="MineralStandardUPbModelRhoNameType">
+        <xs:restriction base="xs:string">
+  
+            <xs:enumeration value="rhoR206_207r__r206_208r" />
+            <xs:enumeration value="rhoR206_207r__r206_238r" />
+            <xs:enumeration value="rhoR206_207r__r208_232r" />
+            <xs:enumeration value="rhoR206_207r__r238_235s" />
+                      
+            <xs:enumeration value="rhoR206_208r__r206_238r" />
+            <xs:enumeration value="rhoR206_208r__r208_232r" />
+            <xs:enumeration value="rhoR206_208r__r238_235s" />
+           
+            <xs:enumeration value="rhoR206_238r__r208_232r" />
+            <xs:enumeration value="rhoR206_238r__r238_235s" />
+            
+            <xs:enumeration value="rhoR208_232r__r238_235s" />
+ 
+           
+        </xs:restriction>
+    </xs:simpleType>
+
+    
+</xs:schema>
