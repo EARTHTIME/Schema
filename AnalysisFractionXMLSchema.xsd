@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://www.earth-time.org"
-           xmlns="http://www.earth-time.org"
+           targetNamespace="https://raw.githubusercontent.com/EARTHTIME/Schema"
+           xmlns="https://raw.githubusercontent.com/EARTHTIME/Schema"
            elementFormDefault="qualified">
     <xs:annotation>
         <xs:documentation xml:lang="en">
             This schema defines the contents of an AnalysisFraction
             for the EARTHTIME / EarthChem project.....
 
-            Copyright 2006-2012 James F. Bowring and EARTHTIME
+            Copyright 2006-2016 James F. Bowring and EARTHTIME
 
             Licensed under the Apache License, Version 2.0 (the "License");
             you may not use this file except in compliance with the License.
@@ -31,12 +31,13 @@
             Revised: 16.August.2010
             Revised: 23.October.2010
             Revised: 26.March.2012 for InitialPbModelET
+            Revised: 23.December.2015
 
         </xs:documentation>
     </xs:annotation>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/InitialPbModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/InitialPbModelETXMLSchema.xsd"/>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/ValueModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/InitialPbModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/InitialPbModelETXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/ValueModelXMLSchema.xsd"/>
     <xs:element name="AnalysisFraction">
         <xs:complexType>
             <xs:sequence>

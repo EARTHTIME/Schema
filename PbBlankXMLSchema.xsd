@@ -1,57 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://www.earth-time.org"
-           xmlns="http://www.earth-time.org"
+           targetNamespace="https://raw.githubusercontent.com/EARTHTIME/Schema"
+           xmlns="https://raw.githubusercontent.com/EARTHTIME/Schema"
            elementFormDefault="qualified">
-  <xs:annotation>
-    <xs:documentation xml:lang="en">
-      This schema defines the contents of a PbBlank
-      for the EARTHTIME / EarthChem project.....
+    <xs:annotation>
+        <xs:documentation xml:lang="en">
+            This schema defines the contents of a PbBlank
+            for the EARTHTIME / EarthChem project.....
 
-      Copyright 2006-2012 James F. Bowring and EARTHTIME
+            Copyright 2006-2016 James F. Bowring and EARTHTIME
 
-      Licensed under the Apache License, Version 2.0 (the "License");
-      you may not use this file except in compliance with the License.
-      You may obtain a copy of the License at
+            Licensed under the Apache License, Version 2.0 (the "License");
+            you may not use this file except in compliance with the License.
+            You may obtain a copy of the License at
 
-      http://www.apache.org/licenses/LICENSE-2.0
+            http://www.apache.org/licenses/LICENSE-2.0
 
-      Unless required by applicable law or agreed to in writing, software
-      distributed under the License is distributed on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-      See the License for the specific language governing permissions and
-      limitations under the License.
+            Unless required by applicable law or agreed to in writing, software
+            distributed under the License is distributed on an "AS IS" BASIS,
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+            See the License for the specific language governing permissions and
+            limitations under the License.
 
-      Author: James F. Bowring[smtp:bowring@gmail.com]
+            Author: James F. Bowring[smtp:bowring@gmail.com]
 
-      Created: 1.August.2007
-      Revised: 1.January.2008
-      Revised: 5.April.2009
+            Created: 1.August.2007
+            Revised: 1.January.2008
+            Revised: 5.April.2009
+            Revised: 23.December.2015
 
-</xs:documentation>
-  </xs:annotation>
-  <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/ValueModelXMLSchema.xsd"/>
-  <xs:element name="PbBlank">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="name" type="xs:string"/>
-        <xs:element name="ratios">
-          <xs:complexType>
-            <xs:sequence minOccurs="3" maxOccurs="4">
-              <xs:element name="ValueModel" type="PbBlankRatio">
-              </xs:element>
+        </xs:documentation>
+    </xs:annotation>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/ValueModelXMLSchema.xsd"/>
+    <xs:element name="PbBlank">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="ratios">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="3" maxOccurs="4">
+                            <xs:element name="ValueModel" type="PbBlankRatio">
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="rhoCorrelations">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="3" maxOccurs="3">
+                            <xs:element name="ValueModel" type="PbBlankRhoCorrelation">
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="rhoCorrelations">
-          <xs:complexType>
-            <xs:sequence minOccurs="3" maxOccurs="3">
-              <xs:element name="ValueModel" type="PbBlankRhoCorrelation">
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+        </xs:complexType>
+    </xs:element>
 </xs:schema>

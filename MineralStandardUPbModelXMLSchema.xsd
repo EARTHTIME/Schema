@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://www.earth-time.org"
-           xmlns="http://www.earth-time.org"
+           targetNamespace="https://raw.githubusercontent.com/EARTHTIME/Schema"
+           xmlns="https://raw.githubusercontent.com/EARTHTIME/Schema"
            elementFormDefault="qualified">
     <xs:annotation>
         <xs:documentation xml:lang="en">
@@ -29,12 +29,13 @@
             Revised: 09.August.2012
             Revised: 27.December.2014
             Revised: 05.June.2015
+            Revised: 23.December.2015
 
 
         </xs:documentation>
     </xs:annotation>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/ValueModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/InitialPbModelETXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/ValueModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/InitialPbModelETXMLSchema.xsd"/>
  
     <xs:element name="MineralStandardUPbModel" type="MineralStandardUPbModel"/>
   

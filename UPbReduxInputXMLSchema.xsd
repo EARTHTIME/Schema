@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://www.earth-time.org"
-           xmlns="http://www.earth-time.org"
+           targetNamespace="https://raw.githubusercontent.com/EARTHTIME/Schema"
+           xmlns="https://raw.githubusercontent.com/EARTHTIME/Schema"
            elementFormDefault="qualified">
     <xs:annotation>
         <xs:documentation xml:lang="en">
             This schema defines the contents of the U-Pb fraction input to
             EARTHTIME U-Pb_Redux software.
 
-            Copyright 2006-2012 James F. Bowring and EARTHTIME
+            Copyright 2006-2016 James F. Bowring and EARTHTIME
 
             Licensed under the Apache License, Version 2.0 (the "License");
             you may not use this file except in compliance with the License.
@@ -29,18 +29,19 @@
             Revised: 8.April.2008
             Revised: 5.April.2009
             Revised: 27.June.2012
+            Revised: 23.December.2015
 
         </xs:documentation>
     </xs:annotation>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/TracerXMLSchema.xsd"/>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/TracerUPbModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/ValueModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/TracerXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/TracerUPbModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/ValueModelXMLSchema.xsd"/>
     <xs:element name="UPbReduxFraction" >
         <xs:complexType >
             <xs:sequence maxOccurs="1"> 
                 <xs:element name="sampleName" type="xs:string" />
                 <xs:element name="fractionID" type="xs:string" />
-        <!-- added April 2010 minOccurs = 0 is for backward compatibility-->
+                <!-- added April 2010 minOccurs = 0 is for backward compatibility-->
                 <xs:element name="grainID" type="xs:string" minOccurs="0"/>
                 <xs:element name="ratioType" type="xs:string" />
                 <xs:element name="pedigree" type="xs:string" />

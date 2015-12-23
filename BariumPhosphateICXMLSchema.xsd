@@ -1,50 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://www.earth-time.org"
-           xmlns="http://www.earth-time.org"
+           targetNamespace="https://raw.githubusercontent.com/EARTHTIME/Schema"
+           xmlns="https://raw.githubusercontent.com/EARTHTIME/Schema"
            elementFormDefault="qualified">
-  <xs:annotation>
-    <xs:documentation xml:lang="en">
-      This schema defines the contents of an EARTHTIME BariumPhosp[hateIC Model.
+    <xs:annotation>
+        <xs:documentation xml:lang="en">
+            This schema defines the contents of an EARTHTIME BariumPhosp[hateIC Model.
 
-      Copyright 2006-2012 James F. Bowring and EARTHTIME
+            Copyright 2006-2016 James F. Bowring and EARTHTIME
 
-      Licensed under the Apache License, Version 2.0 (the "License");
-      you may not use this file except in compliance with the License.
-      You may obtain a copy of the License at
+            Licensed under the Apache License, Version 2.0 (the "License");
+            you may not use this file except in compliance with the License.
+            You may obtain a copy of the License at
 
-      http://www.apache.org/licenses/LICENSE-2.0
+            http://www.apache.org/licenses/LICENSE-2.0
 
-      Unless required by applicable law or agreed to in writing, software
-      distributed under the License is distributed on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-      See the License for the specific language governing permissions and
-      limitations under the License.
+            Unless required by applicable law or agreed to in writing, software
+            distributed under the License is distributed on an "AS IS" BASIS,
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+            See the License for the specific language governing permissions and
+            limitations under the License.
 
-      Author: James F. Bowring[smtp:bowring@gmail.com]
+            Author: James F. Bowring[smtp:bowring@gmail.com]
 
-      Created: 7.October.2009
+            Created: 7.October.2009
+            Revised: 23.December.2015
 
-    </xs:documentation>
-  </xs:annotation>
-  <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/ValueModelXMLSchema.xsd"/>
+        </xs:documentation>
+    </xs:annotation>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/ValueModelXMLSchema.xsd"/>
 
-  <xs:element name="BariumPhosphateIC" type="BariumPhosphateIC"/>
+    <xs:element name="BariumPhosphateIC" type="BariumPhosphateIC"/>
 
-  <xs:complexType name ="BariumPhosphateIC">
-    <xs:sequence maxOccurs="1">
-      <xs:element name="bariumPhosphateICName" type="xs:string" />
-      <xs:element name="versionNumber" type="xs:integer" />
-      <xs:element name="labName" type="xs:string" />
-      <xs:element name="dateCertified" type="xs:date" />
-      <xs:element name="isotopeAbundances">
-        <xs:complexType>
-          <xs:sequence minOccurs="10" maxOccurs="10">
-            <xs:element name="ValueModel" type="IsotopeAbundance">
+    <xs:complexType name ="BariumPhosphateIC">
+        <xs:sequence maxOccurs="1">
+            <xs:element name="bariumPhosphateICName" type="xs:string" />
+            <xs:element name="versionNumber" type="xs:integer" />
+            <xs:element name="labName" type="xs:string" />
+            <xs:element name="dateCertified" type="xs:date" />
+            <xs:element name="isotopeAbundances">
+                <xs:complexType>
+                    <xs:sequence minOccurs="10" maxOccurs="10">
+                        <xs:element name="ValueModel" type="IsotopeAbundance">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
             </xs:element>
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://www.earth-time.org"
-           xmlns="http://www.earth-time.org"
+           targetNamespace="https://raw.githubusercontent.com/EARTHTIME/Schema"
+           xmlns="https://raw.githubusercontent.com/EARTHTIME/Schema"
            elementFormDefault="qualified">
     <xs:annotation>
         <xs:documentation xml:lang="en">
@@ -9,7 +9,7 @@
             for the EARTHTIME / EarthChem project.  The XML files published
             against this schema are produced by U-Pb_Redux.
 
-            Copyright 2006-2012 James F. Bowring and EARTHTIME.
+            Copyright 2006-2016 James F. Bowring and EARTHTIME.
 
             Licensed under the Apache License, Version 2.0 (the "License");
             you may not use this file except in compliance with the License.
@@ -33,20 +33,21 @@
             Revised: 5.November.2010
             Revised: 16.April.2012
             Revised: 30.June.2012
+            Revised: 23.December.2015
 
         </xs:documentation>
     </xs:annotation>
 
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/TracerXMLSchema.xsd"/>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/TracerUPbModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/MineralStandardModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/MineralStandardUPbModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/PbBlankXMLSchema.xsd"/>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/PbBlankICModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/AnalysisFractionXMLSchema.xsd"/>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/PhysicalConstantsXMLSchema.xsd"/>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/PhysicalConstantsModelXMLSchema.xsd"/>
-    <xs:include schemaLocation="http://earth-time.org/projects/upb/public_data/XSD/AnalysisImageXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/TracerXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/TracerUPbModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/MineralStandardModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/MineralStandardUPbModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/PbBlankXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/PbBlankICModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/AnalysisFractionXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/PhysicalConstantsXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/PhysicalConstantsModelXMLSchema.xsd"/>
+    <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/AnalysisImageXMLSchema.xsd"/>
 
     <xs:annotation>
         <xs:documentation xml:lang="en">
