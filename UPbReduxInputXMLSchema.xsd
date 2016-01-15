@@ -36,8 +36,9 @@
     <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/TracerXMLSchema.xsd"/>
     <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/TracerUPbModelXMLSchema.xsd"/>
     <xs:include schemaLocation="https://raw.githubusercontent.com/EARTHTIME/Schema/master/ValueModelXMLSchema.xsd"/>
-    <xs:element name="UPbReduxFraction" >
-        <xs:complexType >
+
+    <xs:element name="UPbReduxFraction" type="UPbReduxFraction" />
+        <xs:complexType name="UPbReduxFraction">
             <xs:sequence maxOccurs="1"> 
                 <xs:element name="sampleName" type="xs:string" />
                 <xs:element name="fractionID" type="xs:string" />
@@ -64,5 +65,5 @@
                 <xs:element name="tracerUPbModel" type="TracerUPbModel" minOccurs="0"  maxOccurs="1" />
             </xs:sequence>
         </xs:complexType>
-    </xs:element>
+
 </xs:schema>
