@@ -75,6 +75,7 @@
 
     <xs:simpleType name="tracerUPbTypeEnum">
         <xs:restriction base="xs:string">
+            <xs:enumeration value="#NONE#" />
             <xs:enumeration value="NONE" />
             <xs:enumeration value="mixed 205-235" />
             <xs:enumeration value="mixed 205-233-235" />
