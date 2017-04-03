@@ -48,7 +48,7 @@
             <xs:element name="comment" type="xs:string" />
             <xs:element name="ratios">
                 <xs:complexType>
-                    <xs:sequence minOccurs="7" maxOccurs="7">
+                    <xs:sequence minOccurs="6" maxOccurs="7">
                         <xs:element name="ValueModelReferenced" type="MeasuredConstant">
                         </xs:element>
                     </xs:sequence>
