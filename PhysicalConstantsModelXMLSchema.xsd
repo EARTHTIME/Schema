@@ -28,6 +28,7 @@
             Revised: 18.July.2012
             Revised: 09.August.2012
             Revised: 23.December.2015
+            Revised: 03.April.2017
 
 
         </xs:documentation>
@@ -87,6 +88,12 @@
     
     <xs:simpleType name="PhysicalConstantsModelRhoNameType">
         <xs:restriction base="xs:string">
+            <xs:enumeration value="rhoLambda226__lambda230" />
+            <xs:enumeration value="rhoLambda226__lambda231" />
+            <xs:enumeration value="rhoLambda226__lambda232" />
+            <xs:enumeration value="rhoLambda226__lambda235" />
+            <xs:enumeration value="rhoLambda226__lambda238" />
+                   
             <xs:enumeration value="rhoLambda230__lambda231" />
             <xs:enumeration value="rhoLambda230__lambda232" />
             <xs:enumeration value="rhoLambda230__lambda235" />
