@@ -40,6 +40,7 @@
             Revised: 09.January.2015
             Revised: 22.March.2015
             Revised: 23.December.2015
+            Revised: 04.April.2017
 
         </xs:documentation>
     </xs:annotation>
@@ -509,6 +510,7 @@
             <xs:enumeration value="lambda232"/>
             <xs:enumeration value="lambda231"/>
             <xs:enumeration value="lambda230"/>
+            <xs:enumeration value="lambda226"/>
         </xs:restriction>
     </xs:simpleType>
 
