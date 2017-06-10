@@ -41,6 +41,7 @@
             Revised: 22.March.2015
             Revised: 23.December.2015
             Revised: 04.April.2017
+            Revised: 10.June.2017
 
         </xs:documentation>
     </xs:annotation>
@@ -68,6 +69,8 @@
     <xs:element name="MineralStandardMeasuredAge" type="MineralStandardMeasuredAge"/>
     <xs:element name="MineralStandardUPbRatioModel" type="MineralStandardUPbRatioModel"/>
     <xs:element name="MineralStandardPPMConcentration" type="MineralStandardPPMConcentration"/>
+    <xs:element name="DetritalUraniumAndThoriumRatio" type="DetritalUraniumAndThoriumRatio"/>
+    <xs:element name="DetritalUraniumAndThoriumRhoCorrelation" type="DetritalUraniumAndThoriumRhoCorrelation"/>
 
 
     <xs:complexType name="ValueModel">
@@ -295,6 +298,49 @@
             <xs:enumeration value="rhoR207_204b__r208_204b" />
         </xs:restriction>
     </xs:simpleType>
+    
+    
+    <xs:complexType name="DetritalUThModelRatio">
+        <xs:complexContent>
+            <xs:restriction base="ValueModel">
+                <xs:sequence>
+                    <xs:element name="name" type="DetritalUThModelRatioNameType" />
+                    <xs:element name="value" type="xs:decimal" />
+                    <xs:element name="uncertaintyType" type="uncertaintyTypes" />
+                    <xs:element name="oneSigma" type="xs:decimal" />
+                </xs:sequence>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="DetritalUThModelRatioNameType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ar232Th_238U" />
+            <xs:enumeration value="ar230Th_238U" />
+            <xs:enumeration value="ar234U_238U" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="DetritalUThModelRhoCorrelation">
+        <xs:complexContent>
+            <xs:restriction base="ValueModel">
+                <xs:sequence>
+                    <xs:element name="name" type="DetritalUThModelRhoNameType" />
+                    <xs:element name="value" type="xs:decimal" />
+                    <xs:element name="uncertaintyType" type="uncertaintyTypes" fixed="NONE"/>
+                    <xs:element name="oneSigma" type="xs:decimal" fixed="0.0" />
+                </xs:sequence>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:simpleType name="DetritalUThModelRhoNameType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="rhoAr232Th_238U__ar230Th_238U" />
+            <xs:enumeration value="rhoAr232Th_238U__ar234Th_238U" />
+            <xs:enumeration value="rhoAr230Th_238U__ar234Th_238U" />
+        </xs:restriction>
+    </xs:simpleType>   
 
     <xs:complexType name="InitialPbModelRatio">
         <xs:complexContent>
