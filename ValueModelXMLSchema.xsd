@@ -69,8 +69,8 @@
     <xs:element name="MineralStandardMeasuredAge" type="MineralStandardMeasuredAge"/>
     <xs:element name="MineralStandardUPbRatioModel" type="MineralStandardUPbRatioModel"/>
     <xs:element name="MineralStandardPPMConcentration" type="MineralStandardPPMConcentration"/>
-    <xs:element name="DetritalUraniumAndThoriumRatio" type="DetritalUraniumAndThoriumRatio"/>
-    <xs:element name="DetritalUraniumAndThoriumRhoCorrelation" type="DetritalUraniumAndThoriumRhoCorrelation"/>
+    <xs:element name="DetritalUThModelRatio" type="DetritalUThModelRatio"/>
+    <xs:element name="DetritalUThModelRhoCorrelation" type="DetritalUThModelRhoCorrelation"/>
 
 
     <xs:complexType name="ValueModel">
