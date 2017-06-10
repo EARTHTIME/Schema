@@ -337,8 +337,8 @@
     <xs:simpleType name="DetritalUThModelRhoNameType">
         <xs:restriction base="xs:string">
             <xs:enumeration value="rhoAr232Th_238U__ar230Th_238U" />
-            <xs:enumeration value="rhoAr232Th_238U__ar234Th_238U" />
-            <xs:enumeration value="rhoAr230Th_238U__ar234Th_238U" />
+            <xs:enumeration value="rhoAr232Th_238U__ar234U_238U" />
+            <xs:enumeration value="rhoAr230Th_238U__ar234U_238U" />
         </xs:restriction>
     </xs:simpleType>   
 
