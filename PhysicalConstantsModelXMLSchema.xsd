@@ -72,7 +72,7 @@
             <xs:element name="atomicMolarMasses">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element minOccurs="9" maxOccurs="9" name="entry">
+                        <xs:element minOccurs="7" maxOccurs="9" name="entry">
                             <xs:complexType>
                                 <xs:sequence>
                                     <xs:element name="string" type="PhysicalConstantsModelAtomicMolarMassNameType" />
