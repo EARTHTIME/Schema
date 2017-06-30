@@ -118,6 +118,8 @@
             <xs:enumeration value="gmol206" />
             <xs:enumeration value="gmol207" />           
             <xs:enumeration value="gmol208" />
+            <xs:enumeration value="gmol230" />
+            <xs:enumeration value="gmol232" />
             <xs:enumeration value="gmol235" />
             <xs:enumeration value="gmol238" />
         </xs:restriction>
