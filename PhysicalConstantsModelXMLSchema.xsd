@@ -29,6 +29,7 @@
             Revised: 09.August.2012
             Revised: 23.December.2015
             Revised: 03.April.2017
+            Revised: 30.June.2017
 
 
         </xs:documentation>
@@ -71,7 +72,7 @@
             <xs:element name="atomicMolarMasses">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element minOccurs="7" maxOccurs="7" name="entry">
+                        <xs:element minOccurs="9" maxOccurs="9" name="entry">
                             <xs:complexType>
                                 <xs:sequence>
                                     <xs:element name="string" type="PhysicalConstantsModelAtomicMolarMassNameType" />
